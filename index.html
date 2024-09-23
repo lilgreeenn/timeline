@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐节时间线</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="timeline-container">
+        <div class="timeline"></div>
+    </div>
+
+    <div class="upload-section">
+        <h2>上传音乐节信息</h2>
+        <form id="eventForm">
+            <label for="year">年份:</label>
+            <input type="number" id="year" name="year" required>
+
+            <label for="date">日期:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="location">地点场地:</label>
+            <input type="text" id="location" name="location" placeholder="比如：深圳B10" required>
+
+            <label for="band-photo">乐队照片:</label>
+            <input type="file" id="band-photo" accept="image/*" required>
+
+            <label for="live-photo">现场照片:</label>
+            <input type="file" id="live-photo" accept="image/*" required>
+
+            <label for="video">演出视频:</label>
+            <input type="file" id="video" accept="video/*">
+
+            <label for="remarks">备注:</label>
+            <textarea id="remarks" name="remarks"></textarea>
+
+            <button type="submit">上传</button>
+        </form>
+    </div>
+
+    <div class="stats-section">
+        <h2>音乐节统计数据</h2>
+        <button onclick="generateStatistics()">生成统计数据</button>
+        <div id="stats-output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
